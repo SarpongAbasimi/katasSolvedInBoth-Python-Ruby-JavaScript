@@ -1,0 +1,56 @@
+Ruby
+=begin  
+In this exercise, a string is passed to a method and a new string has to be 
+returned with the first character of each word in the string.
+=end
+
+
+def make_string(s)
+    split=s.split(' ')
+    answerContainer=[].join('')
+    #Loop through the array and get the first letter of each 
+    split.select do |x|
+        answerContainer << x[0]
+    end
+    return answerContainer
+end
+
+
+print make_string("sees eyes xray yoat")
+  
+  
+#python 
+import unittest
+
+def make_string(s):
+    mysplit=s.split(' ')
+    return ''.join(map(lambda x : x[0],mysplit))
+
+
+print (make_string('This Is A Test'))
+
+
+
+class Testing(unittest.TestCase):
+
+    def test_correct(self):
+        self.assertEquals(make_string("This Is A Test"),"TIAT")
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+#javascript 
+//In this exercise, a string is passed to a method and a new string 
+//has to be returned with the first character of each word in the string
+
+function makeString(s){
+   let myFunc= s.split(' ').reduce(
+        function(acc,cur){
+            acc.push(cur[0])
+        return acc
+        },[]);
+    return myFunc.join('')
+}
+  
+console.log(makeString('This Is A Test'))
