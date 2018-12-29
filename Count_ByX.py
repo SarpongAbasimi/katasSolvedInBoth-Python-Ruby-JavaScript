@@ -1,5 +1,4 @@
-#Ruby
-
+#Ruby Solution for Kata
 def count_by(x, n)
   array=[]
   1.upto(x * n) do |num|
@@ -11,8 +10,7 @@ end
 puts count_by(4,5)
 
 
-#Javascript
-
+#Javascript solution for Kata
 function countBy(x, n) {
   const myArray=[];
   const mul =x*n;
@@ -26,7 +24,7 @@ console.log(countBy(2,5));
 
 
 
-#Python
+#Python Solution For Kata
 import unittest
 
 def count_by(x, n):
